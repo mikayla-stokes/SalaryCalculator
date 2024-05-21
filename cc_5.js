@@ -27,6 +27,10 @@ class Manager extends Employee {
     }
 }
 
-// Example usage:
-const manager = new Manager("John Doe", 5000, "HR");
-console.log(`Annual Salary: ${manager.annualSalary()}`);
+
+// Creating two instances of the Manager class with the provided test data
+const manager1 = new Manager("Bob Ross", 6600, "Digital Marketing");
+manager1.annualSalary();
+
+const manager2 = new Manager("Debbie Little", 7205, "Finance");
+manager2.annualSalary();
