@@ -1,8 +1,8 @@
+//Creating Employee class
 class Employee {
     constructor(name, salary) {
         this.name = name;
         this.salary = salary;
-        console.log(`Name: ${this.name}, Monthly Salary: ${this.salary}`);
     }
 
     annualSalary() {
@@ -10,6 +10,23 @@ class Employee {
     }
 }
 
+//Creating Manager subclass
+class Manager extends Employee {
+    constructor(name, salary, department) {
+        super(name, salary);
+        this.department = department;
+        console.log(`Name: ${this.name}, Monthly Salary: ${this.salary}, Department: ${this.department}`);
+    }
+
+    annualSalary() {
+        const baseAnnualSalary = super.annualSalary();
+        const bonus = baseAnnualSalary * 0.15;
+        const totalAnnualSalary = baseAnnualSalary + bonus;
+        console.log(`Bonus: ${bonus}, Total Annual Salary: ${totalAnnualSalary}`);
+        return totalAnnualSalary;
+    }
+}
+
 // Example usage:
-const employee = new Employee("John Doe", 5000);
-console.log(`Annual Salary: ${employee.annualSalary()}`);
+const manager = new Manager("John Doe", 5000, "HR");
+console.log(`Annual Salary: ${manager.annualSalary()}`);
