@@ -1,3 +1,5 @@
+//U99796912
+
 //Creating Employee class
 class Employee {
     constructor(name, salary) {
